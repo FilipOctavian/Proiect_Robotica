@@ -20,3 +20,13 @@ Acest proiect constă în realizarea unei bariere automate pentru mașinuțe, ba
 - **Breadboard și fire de legătură** – pentru conexiunile electrice.
 - **Arduino** – pentru logica și controlul proiectului.
 
+## Pin folositi si metode de conectare a componentelor
+
+### **3. Senzor cu ultrasunete HC-SR04**
+Senzorul **HC-SR04** este folosit pentru a măsura distanța unui obiect folosind unde sonore.
+
+#### **Conexiuni:**
+- **VCC (alimentare)** → Conectat la **5V** pe Arduino (fir roșu). Acest pin furnizează tensiunea necesară senzorului.
+- **GND (împământare)** → Conectat la **GND** pe Arduino (fir negru).
+- **TRIG (triggerează semnalul ultrasonic)** → Conectat la pinul **9** de pe Arduino (fir galben). Acesta trimite un semnal către senzor pentru a iniția măsurătoarea.
+- **ECHO (returnează semnalul reflectat)** → Conectat la pinul **10** de pe Arduino (fir portocaliu). Acest pin returnează durata necesară pentru ca semnalul să se întoarcă, pe baza căreia se calculează distanța.

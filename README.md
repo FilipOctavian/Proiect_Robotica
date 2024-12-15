@@ -22,10 +22,34 @@ Acest proiect constă în realizarea unei bariere automate pentru mașinuțe, ba
 
 ## Pin folositi si metode de conectare a componentelor
 
-### **3. Senzor cu ultrasunete HC-SR04**
+### **1. Senzor cu ultrasunete HC-SR04**
 
 #### **Conexiuni:**
 - **VCC (alimentare)** → Conectat la **5V** pe Arduino (fir roșu). Acest pin furnizează tensiunea necesară senzorului.
 - **GND (împământare)** → Conectat la **GND** pe Arduino (fir negru).
 - **TRIG (triggerează semnalul ultrasonic)** → Conectat la pinul **9** de pe Arduino (fir galben). Acesta trimite un semnal către senzor pentru a iniția măsurătoarea.
 - **ECHO (returnează semnalul reflectat)** → Conectat la pinul **10** de pe Arduino (fir portocaliu). Acest pin returnează durata necesară pentru ca semnalul să se întoarcă, pe baza căreia se calculează distanța.
+
+### **2. LED-uri (Roșu și Verde) cu rezistențe**
+Două LED-uri sunt conectate pe breadboard, împreună cu rezistențe, pentru a indica anumite condiții în funcție de distanța măsurată de senzor.
+
+#### **Conexiuni:**
+- **LED-ul roșu**:
+  - **Anodul (pinul lung)** → Conectat la pinul **3** pe Arduino (fir galben-verde).
+  - **Catodul (pinul scurt)** → Conectat la **GND** printr-o **rezistență** (de aproximativ **220Ω** pentru a limita curentul).
+
+- **LED-ul verde**:
+  - **Anodul** → Conectat la pinul **4** pe Arduino (fir verde).
+  - **Catodul** → Conectat la **GND** printr-o rezistență similară.
+
+### **3. Servomotor (SG90)**
+Servomotorul este folosit pentru a realiza o mișcare controlată de rotație, de obicei între **0° și 180°**.
+
+#### **Conexiuni:**
+- **Firul roșu (alimentare)** → Conectat la **5V** pe Arduino.
+- **Firul negru (GND)** → Conectat la **GND** pe Arduino.
+- **Firul galben (semnal)** → Conectat la pinul **11** pe Arduino.
+
+### **6. Conexiuni GND și VCC**
+- Toate componentele împart **GND** (împământare) pentru a crea un circuit electric comun.
+- **5V** de la Arduino este utilizat pentru alimentarea senzorului HC-SR04 și a servomotorului.

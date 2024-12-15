@@ -23,7 +23,6 @@ Acest proiect constă în realizarea unei bariere automate pentru mașinuțe, ba
 ## Pin folositi si metode de conectare a componentelor
 
 ### **3. Senzor cu ultrasunete HC-SR04**
-Senzorul **HC-SR04** este folosit pentru a măsura distanța unui obiect folosind unde sonore.
 
 #### **Conexiuni:**
 - **VCC (alimentare)** → Conectat la **5V** pe Arduino (fir roșu). Acest pin furnizează tensiunea necesară senzorului.

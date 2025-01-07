@@ -94,7 +94,7 @@ Acest proiect constă în realizarea unei bariere automate pentru mașinuțe, ba
   - Comenzi simple HIGH/LOW pentru aprindere/stingere, transmise prin pinii digitali.
 
 
-# Pin folositi si metode de conectare a componentelor
+#Pin folositi si metode de conectare a componentelor
 
 ### **1. Senzor cu ultrasunete HC-SR04**
 

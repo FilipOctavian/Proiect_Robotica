@@ -131,7 +131,7 @@ Servomotorul este folosit pentru a realiza o mișcare controlată de rotație, d
 
 # Biblioteci folosite:
 
-##**Biblioteca Servo.h:** 
+## **Biblioteca Servo.h:** 
 -este utilizată în proiect pentru a controla servomotorul.
 -această bibliotecă simplifică interacțiunea cu servomotoarele printr-o serie de funcții predefinite, eliminând necesitatea de a genera manual semnalele PWM.
 

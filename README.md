@@ -127,3 +127,58 @@ Servomotorul este folosit pentru a realiza o mișcare controlată de rotație, d
 ### **6. Conexiuni GND și VCC**
 - Toate componentele împart **GND** (împământare) pentru a crea un circuit electric comun.
 - **5V** de la Arduino este utilizat pentru alimentarea senzorului HC-SR04 și a servomotorului.
+
+
+# Biblioteci folosite:
+
+##**Biblioteca Servo.h:** 
+-este utilizată în proiect pentru a controla servomotorul.
+-această bibliotecă simplifică interacțiunea cu servomotoarele printr-o serie de funcții predefinite, eliminând necesitatea de a genera manual semnalele PWM.
+
+### **Funcții esențiale în biblioteca Servo.h:**
+ -**Servo myServo:** → Crearea unui obiect pentru servomotor.
+ -**myServo.attach(pin:** → Conectarea unui servomotor la un pin digital.
+ -**myServo.write(angle):** → Setarea unghiului de rotație al servomotorului.
+ -**myServo.detach():** → Oprirea semnalului PWM trimis către servomotor.
+
+##**Biblioteca Arduino.h:**
+-este o bibliotecă fundamentală utilizată în programarea plăcilor Arduino.
+-aceasta oferă funcționalități de bază pentru controlul plăcii și lucrul cu pinii de intrare/ieșire, fiind inclusă implicit în majoritatea mediilor de dezvoltare, cum ar fi **Arduino IDE** și **PlatformIO**.
+
+### **Funcționalități principale ale bibliotecii Arduino.h:**
+-**configurarea pinilor (I/O):** → Permite setarea modului de funcționare a pinilor microcontrolerului ca intrare sau ieșire
+-**scriere digitală pe un pin:** → Permite controlul stării unui pin digital, fie în poziția HIGH (pornit), fie LOW (oprit)
+-**citirea valorii unui pin digital:** → permite citirea stării curente a unui pin digital
+-**citirea valorii analogice:** → Citirea valorii analogice
+-**scriere analogică (PWM):** → Scriere analogică
+-**funcții de temporizare:** → Funcții de temporizare
+-**funcții pentru comunicare serială:** → Funcții pentru comunicare serială
+
+
+#**Calibrarea elementelor de senzoristica:**
+
+În cadrul proiectului, calibrarea senzorului ultrasonic **HC-SR04** s-a realizat indirect, prin utilizarea unor parametri și calcule standard.
+
+##**1. Constanta maxDistance:**
+
+int maxDistance = 100;
+
+-această constantă stabilește pragul maxim de detectare a unui obiect la 100 cm.
+-practic, se consideră că un obiect aflat la o distanță mai mică sau egală cu 100 cm activează bariera.
+
+##**2. Calculul distanței folosind ecoul ultrasonic:**
+
+duration = pulseIn(echoPin, HIGH);
+distance = duration * 0.034 / 2;
+
+-**pulseIn()** măsoară durata în microsecunde a pulsului returnat de senzor (cât timp semnalul rămâne HIGH după ce a fost emis un impuls).
+-formula de calcul a distantei: $$\text{distance (cm)} = \frac{\text{durată (µs)} \times 0.034}{2}$$
+-0.034 reprezintă viteza sunetului în aer în cm/µs (340 m/s → 34 cm/ms → 0.034 cm/µs).
+-impărțirea la 2 se face pentru că semnalul trebuie să parcurgă distanța dus-întors (de la senzor la obiect și înapoi).
+
+##**3. Limitarea erorilor de măsurare:**
+
+if (distance <= maxDistance && distance > 0)
+
+-condiția **distance > 0** exclude valorile eronate care pot apărea în cazul în care senzorul nu detectează nimic sau măsoară o distanță invalidă.
+-**distance <= maxDistance** limitează detectarea la un prag maxim definit de utilizator.

@@ -132,27 +132,27 @@ Servomotorul este folosit pentru a realiza o mișcare controlată de rotație, d
 # Biblioteci folosite:
 
 ## **Biblioteca Servo.h:** 
--este utilizată în proiect pentru a controla servomotorul.
--această bibliotecă simplifică interacțiunea cu servomotoarele printr-o serie de funcții predefinite, eliminând necesitatea de a genera manual semnalele PWM.
+- este utilizată în proiect pentru a controla servomotorul.
+- această bibliotecă simplifică interacțiunea cu servomotoarele printr-o serie de funcții predefinite, eliminând necesitatea de a genera manual semnalele PWM.
 
 ### **Funcții esențiale în biblioteca Servo.h:**
- -**Servo myServo:** → Crearea unui obiect pentru servomotor.
- -**myServo.attach(pin:** → Conectarea unui servomotor la un pin digital.
- -**myServo.write(angle):** → Setarea unghiului de rotație al servomotorului.
- -**myServo.detach():** → Oprirea semnalului PWM trimis către servomotor.
+ - **Servo myServo:** → Crearea unui obiect pentru servomotor.
+ - **myServo.attach(pin:** → Conectarea unui servomotor la un pin digital.
+ - **myServo.write(angle):** → Setarea unghiului de rotație al servomotorului.
+ - **myServo.detach():** → Oprirea semnalului PWM trimis către servomotor.
 
 ##**Biblioteca Arduino.h:**
--este o bibliotecă fundamentală utilizată în programarea plăcilor Arduino.
--aceasta oferă funcționalități de bază pentru controlul plăcii și lucrul cu pinii de intrare/ieșire, fiind inclusă implicit în majoritatea mediilor de dezvoltare, cum ar fi **Arduino IDE** și **PlatformIO**.
+- este o bibliotecă fundamentală utilizată în programarea plăcilor Arduino.
+- aceasta oferă funcționalități de bază pentru controlul plăcii și lucrul cu pinii de intrare/ieșire, fiind inclusă implicit în majoritatea mediilor de dezvoltare, cum ar fi **Arduino IDE** și **PlatformIO**.
 
 ### **Funcționalități principale ale bibliotecii Arduino.h:**
--**configurarea pinilor (I/O):** → Permite setarea modului de funcționare a pinilor microcontrolerului ca intrare sau ieșire
--**scriere digitală pe un pin:** → Permite controlul stării unui pin digital, fie în poziția HIGH (pornit), fie LOW (oprit)
--**citirea valorii unui pin digital:** → permite citirea stării curente a unui pin digital
--**citirea valorii analogice:** → Citirea valorii analogice
--**scriere analogică (PWM):** → Scriere analogică
--**funcții de temporizare:** → Funcții de temporizare
--**funcții pentru comunicare serială:** → Funcții pentru comunicare serială
+- **configurarea pinilor (I/O):** → Permite setarea modului de funcționare a pinilor microcontrolerului ca intrare sau ieșire
+- **scriere digitală pe un pin:** → Permite controlul stării unui pin digital, fie în poziția HIGH (pornit), fie LOW (oprit)
+- **citirea valorii unui pin digital:** → permite citirea stării curente a unui pin digital
+- **citirea valorii analogice:** → Citirea valorii analogice
+- **scriere analogică (PWM):** → Scriere analogică
+- **funcții de temporizare:** → Funcții de temporizare
+- **funcții pentru comunicare serială:** → Funcții pentru comunicare serială
 
 
 #**Calibrarea elementelor de senzoristica:**

@@ -4,6 +4,8 @@
 
 Acest proiect constă în realizarea unei bariere automate pentru mașinuțe, bazată pe senzori de mișcare. Scopul principal al acestui proiect este să detecteze mișcarea vehiculelor jucărie și să controleze automat o barieră, utilizând un sistem Arduino. Aceasta este o aplicație practică ce implică utilizarea senzorilor, a motoarelor și a iluminării, oferind o introducere utilă în electronica și programarea cu Arduino.
 
+**Link catre clipul de pe Youtube: https://youtube.com/shorts/CyRH1jaFG-I**
+
 ## Funcționalitate
 
 - **Detectarea mișcării:** Doi senzori de mișcare vor detecta prezența mașinuțelor.

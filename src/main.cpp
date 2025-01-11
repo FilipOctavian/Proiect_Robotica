@@ -9,7 +9,7 @@ Servo myServo;
 
 long duration;
 int distance;
-int maxDistance = 100;
+int maxDistance = 20;
 
 void setup() {
     pinMode(trigPin, OUTPUT);
